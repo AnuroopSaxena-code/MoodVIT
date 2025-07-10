@@ -5,8 +5,7 @@ import {useState} from 'react'
 export default function Page() {
   const [entry, setEntry] = useState('')
 
-  const handleSubmit = async() => {
-    const handleSubmit = async () => {
+  const handleSubmit = async () => {
   if (!entry.trim()) return
 
   const { error } = await supabase.from('entries').insert({
@@ -22,7 +21,6 @@ export default function Page() {
     alert('Your journal has been saved!')
   }
 }
-  }
 
   return (
     <div className="min-h-screen p-8 bg-gray-100">
